@@ -3,12 +3,12 @@
   <_name>Pulley</_name>
   <dependency type="executable" location="path">boxes</dependency>
   <id>info.festi.boxes.py.Pulley</id>
+
   <param name="generator" type="string" gui-hidden="true">pulley</param>
-  <param name="inkscape" type="boolean" gui-hidden="true">true</param>
   <param name="tab" type="notebook">
 
-    <page name="0" _gui-text="Pulley Settings">
-      <param name="h" type="float" max="9999" _gui-text="h" gui-description="inner height in mm">6.0</param>
+    <page name="0" _gui-text="Pulley">
+      <param name="h" type="float" precision="2" max="9999" _gui-text="h" gui-description="inner height in mm (unless outside selected)">6.0</param>
       <param name="profile" type="enum" _gui-text="profile" gui-description="profile of the teeth/belt">
         <item value="40DP">40DP</item>
         <item value="AT5">AT5</item>
@@ -26,17 +26,17 @@
         <item value="XL">XL</item>
       </param>
       <param name="teeth" type="int" max="9999" _gui-text="teeth" gui-description="number of teeth">20</param>
-      <param name="axle" type="float" max="9999" _gui-text="axle" gui-description="diameter of the axle">5</param>
+      <param name="axle" type="float" precision="2" max="9999" _gui-text="axle" gui-description="diameter of the axle">5</param>
       <param name="insideout" type="boolean" max="9999" _gui-text="insideout" gui-description="create a ring gear with the belt being pushed against from within">False</param>
-      <param name="top" type="float" max="9999" _gui-text="top" gui-description="overlap of top rim (zero for none)">0</param>
+      <param name="top" type="float" precision="2" max="9999" _gui-text="top" gui-description="overlap of top rim (zero for none)">0</param>
     </page>
 
-    <page name="1" _gui-text="Default Settings">
-      <param name="thickness" type="float" max="9999" _gui-text="thickness" gui-description="thickness of the material">3.0</param>
-      <param name="tabs" type="float" max="9999" _gui-text="tabs" gui-description="width of tabs holding th parts in place (not supported everywhere)">0.0</param>
+    <page name="1" _gui-text="Default">
+      <param name="thickness" type="float" precision="2" max="9999" _gui-text="thickness" gui-description="thickness of the material">3.0</param>
+      <param name="tabs" type="float" precision="2" max="9999" _gui-text="tabs" gui-description="width of tabs holding the parts in place in mm (not supported everywhere)">0.0</param>
       <param name="debug" type="boolean" max="9999" _gui-text="debug" gui-description="print surrounding boxes for some structures">False</param>
-      <param name="reference" type="float" max="9999" _gui-text="reference" gui-description="print reference rectangle with given length">100</param>
-      <param name="burn" type="float" max="9999" _gui-text="burn" gui-description="burn correction in mm (bigger values for tighter fit)">0.1</param>
+      <param name="reference" type="float" precision="2" max="9999" _gui-text="reference" gui-description="print reference rectangle with given length (zero to disable)">100</param>
+      <param name="burn" type="float" precision="2" max="9999" _gui-text="burn" gui-description='burn correction in mm (bigger values for tighter fit). Use BurnTest in "Parts and Samples" to find the right value.'>0.1</param>
     </page>
 
   </param>
